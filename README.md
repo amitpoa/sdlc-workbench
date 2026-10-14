@@ -4,7 +4,7 @@
 
 A browser-based Business Analysis workbench by [Amit Paul](https://github.com/amitpoa). This portfolio project follows the analysis journey from an existing business process to a proposed change: capture evidence, model the workflow, break down delivery, and inspect the impact before updating the baseline.
 
-[Requirements](REQUIREMENTS.md) · [Usage guide](public/public-use-guide.md) · [Sample requirements](public/samples/payment-requirements.md) · [Sample SRS](public/samples/sample-SRS.md) · [Report an issue](https://github.com/amitpoa/sdlc-workbench/issues)
+[Open the live workbench](https://amitpoa.github.io/sdlc-workbench/) · [Requirements](REQUIREMENTS.md) · [Usage guide](public/public-use-guide.md) · [Sample requirements](public/samples/payment-requirements.md) · [Sample SRS](public/samples/sample-SRS.md) · [Report an issue](https://github.com/amitpoa/sdlc-workbench/issues)
 
 ## What you can do
 
@@ -88,7 +88,7 @@ The repository includes [a deployment workflow](.github/workflows/pages.yml).
 2. Push to the default branch, or select **Actions → Publish Trace to GitHub Pages → Run workflow**.
 3. Wait for the checks, build and deployment to succeed. Open the URL returned by the deployment.
 
-The expected default address after successful deployment is `https://amitpoa.github.io/sdlc-workbench/`. This is a deployment target, not a claim that Pages is already enabled.
+The public workbench is deployed at [amitpoa.github.io/sdlc-workbench](https://amitpoa.github.io/sdlc-workbench/). The initial GitHub Actions run passed dependency installation, all checks, the static build and Pages deployment.
 
 The build derives its asset path and repository link from `GITHUB_REPOSITORY`. Forks use their own owner and repository name. The `#workbench` route needs no server route rewriting. Other static hosts can set `TRACE_BASE_PATH` and `TRACE_REPOSITORY_URL`.
 
