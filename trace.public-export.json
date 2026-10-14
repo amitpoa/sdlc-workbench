@@ -1,0 +1,5 @@
+{
+  "format": "trace-public-source-v1",
+  "source": "Shared Trace frontend and analysis engine; no private runtime or records",
+  "license": "MIT"
+}

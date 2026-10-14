@@ -1,0 +1,6 @@
+node_modules/
+public-dist/
+.sites-runtime/
+.env*
+.DS_Store
+*.tsbuildinfo

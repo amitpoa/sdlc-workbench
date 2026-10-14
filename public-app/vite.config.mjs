@@ -1,0 +1,10 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+import { cpSync,copyFileSync } from 'node:fs';
+const directory=path.dirname(fileURLToPath(import.meta.url)),root=path.resolve(directory,'..');
+const repository=process.env.GITHUB_REPOSITORY||'',name=repository.split('/')[1];
+const base=process.env.TRACE_BASE_PATH||(name?(name.endsWith('.github.io')?'/':`/${name}/`):'./');
+const publicAssets={name:'trace-public-assets',closeBundle(){for(const directory of ['document-reader','samples'])cpSync(path.join(root,'public',directory),path.join(root,'public-dist',directory),{recursive:true});for(const file of ['favicon.svg','public-use-guide.md'])copyFileSync(path.join(root,'public',file),path.join(root,'public-dist',file));},transformIndexHtml(html,context){return context.server?html.replace(/<meta http-equiv="Content-Security-Policy"[^>]+\/>/,''):html;}};
+export default defineConfig({root:directory,base,publicDir:false,plugins:[react(),publicAssets],define:{__TRACE_PUBLIC__:'true',__TRACE_BASE__:JSON.stringify(base),__TRACE_REPOSITORY__:JSON.stringify(process.env.TRACE_REPOSITORY_URL||(repository?'https://github.com/'+repository:''))},resolve:{alias:[{find:/^@\/components\/use-saved-projects$/,replacement:path.join(root,'components/use-local-projects.ts')},{find:'@',replacement:root}]},build:{outDir:path.join(root,'public-dist'),emptyOutDir:true,manifest:true},server:{host:'127.0.0.1'},css:{postcss:path.join(root,'postcss.config.mjs')}});

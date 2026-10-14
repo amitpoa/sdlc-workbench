@@ -1,0 +1,162 @@
+{
+  "format": "trace-projects-v1",
+  "collection": {
+    "activeId": "PRJ-001",
+    "projects": [
+      {
+        "id": "PRJ-001",
+        "workbench": {
+          "title": "Payment approval",
+          "revision": 1,
+          "sources": [
+            {
+              "id": "SRC-01",
+              "title": "Business brief · paragraph 1",
+              "text": "A Finance Maker can search for an unpaid payslip and submit a Mark as Paid request. Paid payslips cannot be submitted again."
+            },
+            {
+              "id": "SRC-02",
+              "title": "Business brief · paragraph 2",
+              "text": "Payment method and payment date are mandatory before a request is submitted. A payment date must be a valid calendar date."
+            },
+            {
+              "id": "SRC-03",
+              "title": "Business brief · paragraph 3",
+              "text": "For a payslip amount greater than zero, payment method lists bank names only. For a zero amount, it lists Previous Advance, Scholarship & Waiver, and Semester Drop."
+            },
+            {
+              "id": "SRC-04",
+              "title": "Business brief · paragraph 4",
+              "text": "A duplicate transaction ID for the same bank must be blocked before submission, with a failure recorded in the audit log."
+            },
+            {
+              "id": "SRC-05",
+              "title": "Business brief · paragraph 5",
+              "text": "A Finance Checker can approve or reject a submitted request. The Maker cannot approve their own request."
+            },
+            {
+              "id": "SRC-06",
+              "title": "Business brief · paragraph 6",
+              "text": "A payslip becomes Paid only after the required approval is complete. Until then, its payment status remains Unpaid."
+            },
+            {
+              "id": "SRC-07",
+              "title": "Business brief · paragraph 7",
+              "text": "A rejected request remains Unpaid and returns to the Maker for correction and resubmission. A rejection reason is mandatory."
+            },
+            {
+              "id": "SRC-08",
+              "title": "Business brief · paragraph 8",
+              "text": "The system records submissions, approval decisions, and validation failures with the actor, timestamp, payslip number, and changed values in an audit log."
+            }
+          ],
+          "requirements": [
+            {
+              "id": "BR-01",
+              "title": "A Finance Maker can search for an unpaid payslip and submit a Mark as Paid …",
+              "text": "A Finance Maker can search for an unpaid payslip and submit a Mark as Paid request. Paid payslips cannot be submitted again.",
+              "role": "Finance Maker",
+              "category": "Request intake",
+              "sourceIds": [
+                "SRC-01"
+              ],
+              "priority": "Must",
+              "reviewed": false
+            },
+            {
+              "id": "BR-02",
+              "title": "Payment method and payment date are mandatory before a request is submitted",
+              "text": "Payment method and payment date are mandatory before a request is submitted. A payment date must be a valid calendar date.",
+              "role": "Finance Officer",
+              "category": "Validation & controls",
+              "sourceIds": [
+                "SRC-02"
+              ],
+              "priority": "Must",
+              "reviewed": false
+            },
+            {
+              "id": "BR-03",
+              "title": "For a payslip amount greater than zero, payment method lists bank names only",
+              "text": "For a payslip amount greater than zero, payment method lists bank names only. For a zero amount, it lists Previous Advance, Scholarship & Waiver, and Semester Drop.",
+              "role": "Finance Officer",
+              "category": "Validation & controls",
+              "sourceIds": [
+                "SRC-03"
+              ],
+              "priority": "Must",
+              "reviewed": false
+            },
+            {
+              "id": "BR-04",
+              "title": "A duplicate transaction ID for the same bank must be blocked before submiss…",
+              "text": "A duplicate transaction ID for the same bank must be blocked before submission, with a failure recorded in the audit log.",
+              "role": "Business user",
+              "category": "Validation & controls",
+              "sourceIds": [
+                "SRC-04"
+              ],
+              "priority": "Must",
+              "reviewed": false
+            },
+            {
+              "id": "BR-05",
+              "title": "A Finance Checker can approve or reject a submitted request",
+              "text": "A Finance Checker can approve or reject a submitted request. The Maker cannot approve their own request.",
+              "role": "Finance Checker",
+              "category": "Approval & status",
+              "sourceIds": [
+                "SRC-05"
+              ],
+              "priority": "Must",
+              "reviewed": false
+            },
+            {
+              "id": "BR-06",
+              "title": "A payslip becomes Paid only after the required approval is complete",
+              "text": "A payslip becomes Paid only after the required approval is complete. Until then, its payment status remains Unpaid.",
+              "role": "Finance Checker",
+              "category": "Approval & status",
+              "sourceIds": [
+                "SRC-06"
+              ],
+              "priority": "Must",
+              "reviewed": false
+            },
+            {
+              "id": "BR-07",
+              "title": "A rejected request remains Unpaid and returns to the Maker for correction a…",
+              "text": "A rejected request remains Unpaid and returns to the Maker for correction and resubmission. A rejection reason is mandatory.",
+              "role": "Finance Checker",
+              "category": "Approval & status",
+              "sourceIds": [
+                "SRC-07"
+              ],
+              "priority": "Must",
+              "reviewed": false
+            },
+            {
+              "id": "BR-08",
+              "title": "The system records submissions, approval decisions, and validation failures…",
+              "text": "The system records submissions, approval decisions, and validation failures with the actor, timestamp, payslip number, and changed values in an audit log.",
+              "role": "Finance Checker",
+              "category": "Audit & governance",
+              "sourceIds": [
+                "SRC-08"
+              ],
+              "priority": "Must",
+              "reviewed": false
+            }
+          ],
+          "storyEdits": {},
+          "questions": [
+            "What is the approval turnaround time?",
+            "Are backdated payment dates permitted?",
+            "Who can view the audit log, and how long is it retained?"
+          ],
+          "changes": []
+        }
+      }
+    ]
+  }
+}
