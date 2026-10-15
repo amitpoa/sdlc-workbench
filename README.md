@@ -6,6 +6,8 @@ A browser-based Business Analysis workbench by [Amit Paul](https://github.com/am
 
 [Open the live workbench](https://amitpoa.github.io/sdlc-workbench/) · [Requirements](REQUIREMENTS.md) · [Usage guide](public/public-use-guide.md) · [Sample requirements](public/samples/payment-requirements.md) · [Sample SRS](public/samples/sample-SRS.md) · [Report an issue](https://github.com/amitpoa/sdlc-workbench/issues)
 
+The interactive showcase lets you click through five analysis stages and compare a sample rule change. **Open workbench always starts at Projects**, where you choose an existing project or create a new one.
+
 ## What you can do
 
 | Workspace | Capabilities |
@@ -47,7 +49,7 @@ Use either install path. Sharing these commands lets someone run their own copy;
 
 ## Try the full workflow
 
-1. Select **Try the workbench**. Inspect the sample payment project's requirements and source evidence.
+1. Select **Open workbench** to reach **Projects**. Create your own project or choose **Open project** on the payment sample, then inspect its requirements and source evidence.
 2. In **Workflow**, move nodes, edit roles and linked rules, and connect branches with guards.
 3. Select **Suggest stories**, inspect content and source links, choose a project/feature/epic parent, and create selected drafts.
 4. Refine the ten sections in **User stories**. In **Relations**, select a node to highlight its directly associated nodes and connectors.

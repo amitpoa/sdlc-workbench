@@ -173,6 +173,9 @@ The analyst shall review a replacement rule before changing the baseline.
 - **AC-12.2:** Allow sample use without external data, login or API keys.
 - **AC-12.3:** Include an MIT license for original code, dependency licenses, setup commands and a Pages workflow.
 - **AC-12.4:** Support a static repository subpath such as `/sdlc-workbench/`; exclude private server/auth dependencies and private project data.
+- **AC-12.5:** Every public Open workbench entry, including a direct `#workbench` link or reload, lands on Projects. A project opens only after selection or creation.
+- **AC-12.6:** The showcase offers a selectable analysis-stage preview and a reversible rule-change example. Demonstration changes do not alter saved project data.
+- **AC-12.7:** Use a calm, readable palette, visible keyboard focus, responsive layouts and reduced-motion support; avoid automatic cycling or decorative animation.
 
 ## 5. Non-functional requirements
 

@@ -4,7 +4,7 @@ A portfolio project by Amit Paul, Business Analyst.
 
 ## First use
 
-1. Select **Try the workbench**. The sample payment project opens in Requirements.
+1. Select **Open workbench** to reach **Projects**. Choose **Create project** for your own work, or **Open project** on the payment sample. Then select Requirements to inspect the sample rules.
 2. Inspect its rules and source passages. In Workflow, select nodes, edit their responsible role and linked rules, connect guarded paths, and arrange swimlanes.
 3. Select **Suggest stories**, inspect a candidate's flow path and all ten SRS sections, select drafts, and create them under the project, a feature, or an epic.
 4. In User stories, refine the content and save the reviewed story. In Relations, select a node to highlight its direct associated nodes and connectors.
